@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, inidial-scale=1">
+        <title>Election Results</title>
+
+        <link rel="shortcut icon" href="#">
+
+        <!-- Bootstrap -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container" style="width: 650px;">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="text-center">Election Results</h1>
+                    <hr/>
+                    <br/>
+                    <div id="loader">
+                        <p class="text-center">Loading...</p>
+                    </div>
+                    <div id="content">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Name</th>
+                                    <th scope="col">Votes</th>
+                                </tr>
+                            </thead>
+                            <tbody id="candidatesResults">
+                            </tbody>
+                        </table>
+                        <form id="form" onSubmit="App.castVote(); return false;">
+                            <div class="form-group">
+                                <label for="candidatesSelect">Select Candidate</label>
+                                <select class="form-control" id="candidatesSelect"></select>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Vote</button>
+                        </form>
+                        <hr/>
+                        <p id="accountAddress" class="text-center"></p>
+                        <hr/>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- jQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <!-- Include plugins -->
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/web3.min.js"></script>
+        <script src="js/truffle-contract.js"></script>
+        <script src="js/app.js"></script>
+    </body>
+</html>
+
